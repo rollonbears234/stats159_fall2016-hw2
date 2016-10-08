@@ -1,6 +1,6 @@
 ---
 title: "report"
-subtitle: "Linear Regression"
+subtitle: "Linear Regression - by Bryan Alcorn"
 output: pdf_document
 fontsize: 12pt
 urlcolor: blue

@@ -1,26 +1,15 @@
 .PHONY: all
 
-all: report/report.pdf, eda-output.txt, regression.RData
-
-
-report.pdf: report/report.Rmd, regression.RData, scatterplot-tv-sales.png
-	library(knitr); knit()
+all: report/report.pdf, data/eda-output.txt, data/regression.RData
 
 data/regression.RData:
-	cd code; Rscript regression-script.R
-
-
-code/regression-script.R:
-
-
-images/scatterplot-tv-sales.pdf:
 	cd code; Rscript regression-script.R
 
 data/eda-output.txt:
 	cd code; Rscript eda-script.R
 
-
-
+report/report.pdf: data/regression.RData
+	cd report; R -e "rmarkdown::render('report.Rmd')"
 
 
 .PHONY: data
