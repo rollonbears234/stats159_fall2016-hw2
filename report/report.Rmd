@@ -51,6 +51,12 @@ Utilizing the function lm (linear model), we get the coefficients for a regressi
 
 Sales = m(TV) + b
 
+###### Steps takes for the project 
+   1. gather data
+   2. produce the linear model from the data
+   3. export all data and create the images
+   4. Make the make file connecting everything
+   5. Write the report and then run the make file to output a PDF file of the report
 
 ### Results
 
@@ -73,7 +79,7 @@ Bellow are some plots to illustrate the data provided in Advertising.csv
 
 ![Scatterplot TV vs. Sales](../images/scatterplot-tv-sales.png)
 
-> The data has an interesting trend. The spread increases over time. As the TV variables increases, the data points become less concentrated around the sales data. 
+> The data has an interesting trend. The spread increases over time. As the TV variables increases, the data points become less concentrated around the sales data. Also interesting is the large P value for the data. This does not seem to be data produced by chance. 
 
 
 

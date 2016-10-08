@@ -1,6 +1,6 @@
 .PHONY: all
 
-all: report/report.pdf, data/eda-output.txt, data/regression.RData
+all: data/eda-output.txt data/regression.RData report/report.pdf
 
 data/regression.RData:
 	cd code; Rscript regression-script.R
@@ -8,7 +8,7 @@ data/regression.RData:
 data/eda-output.txt:
 	cd code; Rscript eda-script.R
 
-report/report.pdf: data/regression.RData
+report/report.pdf: data/regression.RData data/eda-output.txt
 	cd report; R -e "rmarkdown::render('report.Rmd')"
 
 
